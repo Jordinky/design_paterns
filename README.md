@@ -16,7 +16,7 @@
 
 <p>Este comportamiento es imposible de implementar con un constructor normal, ya que una llamada al constructor siempre <b>debe</b>devolver un nuevo objecto por diseño.</p>
 
-<h4>Proporcionar un punto de acceso global a dicha instancia</h4>
+<h4>2. Proporcionar un punto de acceso global a dicha instancia</h4>
 
 <p>Las variables globales aunque son muy utiles también son poco seguras, ya que cualquier código podria sobrescribir el contenido de esas variables y descomponer la aplicación.</p>
 
