@@ -90,11 +90,11 @@
 
 ## Aplicabilidad
 
-<p><b>Utiliza el patrón Singleton cuando una clase de tu programa tan solo deba tener una instancia disponible para los clientes; por ejemplo, el único objetode base de datos compartido por distintas partes del programa.</b</p>
+<p><b>Utiliza el patrón Singleton cuando una clase de tu programa tan solo deba tener una instancia disponible para los clientes; por ejemplo, el único objetode base de datos compartido por distintas partes del programa.</b></p>
 
 <p>El patrón Singleton deshabilita el resto de las maneras de crear objetos de una clase, excepto el método especial de creación. Este método crea un nuevo objeto, o bien devuelve uno existente si ya ha sido creado.</p>
 
-<p><b>Utiliza el patrón Singleton cuando necesites un control mas estricto de las variables globales.</b</p>
+<p><b>Utiliza el patrón Singleton cuando necesites un control mas estricto de las variables globales.</b></p>
 
 <p>Al contrario que las variables globales, el patrón Singleton garantia que haya una única instancia de una clase. A excepcion de la propia clase Singleton, nada puede sustituir la instancia en caché.</p>
 
@@ -118,5 +118,19 @@
     </li>
 </ol>
 
+## Pros y contras
 
+<div align-items="center">
+    <ul>
+        <li>Puedes tener la certeza de que una clase tiene una única instancia.</li>
+        <li>Obtienes un punto de acceso global a dicha instancia.</li>
+        <li>El objeto Singleton solo se inicializa cuando se requiere por primera vez.</li>
+    </ul>
+    <ul>
+        <li>vulnera el <i>Principio de responsabilidad única. El patrón resuelve dos problemas al mismo tiempo.</i></li>
+        <li>El patrón Singleton puede enmascarar un mal diseño, por ejemplo, cuando los componentes del programa saben demasiado los unos sobre los otros.</li>
+        <li>El patrón requiere de un tratamiento especial en un entorno con múltiples hilos de ejecución, para que varios hilos no creen un objeto Singleton varias veces.</li>
+        <li>Puede resultar complicado realizar la prueba unitaria del código cliente del Singleton porque muchos <i>frameworks</i> de prueba dependen de la herencia a la hora de crear objetos simulados (mock objects). Debido a que la clase Singleton es privada y en la mayoria de los lenguajes resulta imposible sobreescribir métodos estaticos.</li>
+    </ul>
+</div>
 
