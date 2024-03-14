@@ -40,7 +40,7 @@
 <p>En este ejemplo, la clase de conexión de la base de datos actua como <b>Singleton.</b> Esta clase no tiene un constructor público, por lo que la única manera de obtener su objeto es invocando al método <i>obtenerInstancia.</i> Este método almacena en caché el primer objeto creado y lo devuelve en todas las llamadas siguientes.</p>
 
 
-   <code>// La clase Base de datos define el método `obtenerInstancia`
+    // La clase Base de datos define el método `obtenerInstancia`
     // que permite a los clientes acceder a la misma instancia de
     // una conexión de la base de datos a través del programa.
     class Database is
@@ -87,7 +87,7 @@
             bar.query("SELECT ...")
             // La variable `bar` contendrá el mismo objeto que la
             // variable `foo`.
-</code>        
+  
 
 
 
