@@ -76,7 +76,8 @@ class Database is
         // tanto, aquí puedes colocar lógica de regularización
         // (throttling) o de envío a la memoria caché.
         // ...
-
+        
+//Clase para la aplicación
 class Application is
     method main() is
         Database foo = Database.getInstance()
