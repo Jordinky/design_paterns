@@ -2,7 +2,7 @@
 
 <h2>Singleton</h2>
 
-## proposito
+## Proposito
 
 <p><b>Singleton</b> es un patrón de diseño creacional que nos permite asegurarnos de que una clase tenga una única instancia, a la vez que proporciona un punto de acceso global a dicha instancia.</p>
 
@@ -139,7 +139,7 @@
 <ul>
     <li>Una clase <b>fachada</b> a menudo puede transformarse en una <b>Singleton</b>, ya que un único objeto fachada es suficiente en la mayoría de los casos.</li>
     <li><b>Flyweight</b> podría asemejarse a <b>Singleton</b> si de algún modo pudieras reducir todos los estados compartidos de los objetos a un único objeto flyweight. pero existen dos diferencias fundamentales entre estos patrones:</li>
-<ol>
+<ol start ="1">
     <li>Solo debe haber una instancia <b>Singleton</b>, mientras que una clase <i>Flyweight</i> puede tener varias instancias con distintos estados intrinsecos.</li>
     <li>El objeto <i>Singleton puede ser mutable. Los objetos flyweight son inmutables</i></li>
 </ol>
