@@ -120,17 +120,29 @@
 
 ## Pros y contras
 
-<div align-items="center">
-    <ul>
-        <li>Puedes tener la certeza de que una clase tiene una única instancia.</li>
-        <li>Obtienes un punto de acceso global a dicha instancia.</li>
-        <li>El objeto Singleton solo se inicializa cuando se requiere por primera vez.</li>
-    </ul>
-    <ul>
-        <li>vulnera el <i>Principio de responsabilidad única. El patrón resuelve dos problemas al mismo tiempo.</i></li>
-        <li>El patrón Singleton puede enmascarar un mal diseño, por ejemplo, cuando los componentes del programa saben demasiado los unos sobre los otros.</li>
-        <li>El patrón requiere de un tratamiento especial en un entorno con múltiples hilos de ejecución, para que varios hilos no creen un objeto Singleton varias veces.</li>
-        <li>Puede resultar complicado realizar la prueba unitaria del código cliente del Singleton porque muchos <i>frameworks</i> de prueba dependen de la herencia a la hora de crear objetos simulados (mock objects). Debido a que la clase Singleton es privada y en la mayoria de los lenguajes resulta imposible sobreescribir métodos estaticos.</li>
-    </ul>
+<h4>Pros</h4>
+<ul>
+    <li>Puedes tener la certeza de que una clase tiene una única instancia.</li>
+    <li>Obtienes un punto de acceso global a dicha instancia.</li>
+    <li>El objeto Singleton solo se inicializa cuando se requiere por primera vez.</li>
+</ul>
+<h4>Contras</h4>
+<ul>
+    <li>vulnera el <i>Principio de responsabilidad única. El patrón resuelve dos problemas al mismo tiempo.</i></li>
+    <li>El patrón Singleton puede enmascarar un mal diseño, por ejemplo, cuando los componentes del programa saben demasiado los unos sobre los otros.</li>
+    <li>El patrón requiere de un tratamiento especial en un entorno con múltiples hilos de ejecución, para que varios hilos no creen un objeto Singleton varias veces.</li>
+    <li>Puede resultar complicado realizar la prueba unitaria del código cliente del Singleton porque muchos <i>frameworks</i> de prueba dependen de la herencia a la hora de crear objetos simulados (mock objects). Debido a que la clase Singleton es privada y en la mayoria de los lenguajes resulta imposible sobreescribir métodos estaticos.</li>
+</ul>
 </div>
+
+## Relaciones con otros patrones
+<ul>
+    <li>Una clase <b>fachada</b> a menudo puede transformarse en una <b>Singleton</b>, ya que un único objeto fachada es suficiente en la mayoría de los casos.</li>
+    <li><b>Flyweight</b> podría asemejarse a <b>Singleton</b> si de algún modo pudieras reducir todos los estados compartidos de los objetos a un único objeto flyweight. pero existen dos diferencias fundamentales entre estos patrones:</li>
+<ol>
+    <li>Solo debe haber una instancia <b>Singleton</b>, mientras que una clase <i>Flyweight</i> puede tener varias instancias con distintos estados intrinsecos.</li>
+    <li>El objeto <i>Singleton puede ser mutable. Los objetos flyweight son inmutables</i></li>
+</ol>
+    <li>Los patrones <b>Abstract Factory</b>,<b>Builder</b> y <b>Prototype</b> pueden todos ellos implementarse como <b>Singletons.</b></li>
+</ul>
 
