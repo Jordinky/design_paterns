@@ -87,7 +87,36 @@
             bar.query("SELECT ...")
             // La variable `bar` contendrá el mismo objeto que la
             // variable `foo`.
-  
+
+## Aplicabilidad
+
+<p><b>Utiliza el patrón Singleton cuando una clase de tu programa tan solo deba tener una instancia disponible para los clientes; por ejemplo, el único objetode base de datos compartido por distintas partes del programa.</b</p>
+
+<p>El patrón Singleton deshabilita el resto de las maneras de crear objetos de una clase, excepto el método especial de creación. Este método crea un nuevo objeto, o bien devuelve uno existente si ya ha sido creado.</p>
+
+<p><b>Utiliza el patrón Singleton cuando necesites un control mas estricto de las variables globales.</b</p>
+
+<p>Al contrario que las variables globales, el patrón Singleton garantia que haya una única instancia de una clase. A excepcion de la propia clase Singleton, nada puede sustituir la instancia en caché.</p>
+
+## Cómo implementarlo
+
+<ol>
+    <li>
+        <p>Añade un campo estático privado a la clase para almacenar la instancia Singleton.</p>
+    </li>
+    <li>
+        <p>Declara un método de creación estático público para obtener la instancia Singleton</p>
+    </li>
+    <li>
+        <p>Implementa una inicialización diferida dentro del método estático. Debe crear un nuevo objeto en su primera llamada y colocarlo dentro del campo estático. El método debera devolver siempre esa instancia en todas las llamadas siguientes.</p>
+    </li>
+    <li>
+        <p>Declara el constructor de clase como privado. El método estático de la clase seguirá siendo capaz de invocar al constructor, pero no a los otros objetos.</p>
+    </li>
+    <li>
+        <p>Repasa el código cliente y sustituye todas las llamadas directas al constructor de la instancia Singleton por llamadas a su método de creación estático.</p>
+    </li>
+</ol>
 
 
 
